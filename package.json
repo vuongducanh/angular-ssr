@@ -4,13 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && ng run angular_ssr:server",
+    "build-dev": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run angular_ssr:serve-ssr",
     "serve:ssr": "node dist/angular_ssr/server/main.js",
     "build:ssr": "ng build && ng run angular_ssr:server",
-    "prerender": "ng run angular_ssr:prerender"
+    "prerender": "ng run angular_ssr:prerender",
+    "vercel-build": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
